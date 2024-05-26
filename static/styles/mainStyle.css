@@ -1,0 +1,169 @@
+* {
+    border: none;
+    margin: 0;
+  }
+  
+  html,
+  body {
+    margin: 0; 
+    padding: 0;
+    background: #19161c;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  
+  canvas {
+    background: white;
+    background: radial-gradient(#FFF, #DDD);
+
+    transform-origin: 0 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ui {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .ui p {
+    /* color: white; */
+    font-size: 11px;
+    font-weight: 700;
+  }
+  
+  .ui p.zoom {
+    margin-bottom: 5px;
+  }
+  
+  .ui p.zoom span {
+    margin-right: 5px;
+    border: solid 1px #777;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  
+  .ui p.zoom span.zoomin {
+    padding: 2px 5px;
+  }
+  
+  .ui p.zoom span.zoomout {
+    padding: 2px 8px;
+  }
+  
+  .ui p.zoom span:hover {
+    background: black;
+    color: white;
+  }
+
+
+  .box, .boxhidden{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999; /* Ensure it appears above other elements */
+    background-color:transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+.boxhidden{
+  width: 100%;
+  display: block; /* Ensure the span behaves like a block element */
+  text-align: center;
+}
+
+  .hidden{
+    display: none;
+  }
+  
+  .input {
+      padding: 10px;
+      width: 80px;
+      height: 80px;
+      background: none;
+      border: 4px solid #2596be ;
+      border-radius: 50px;
+      box-sizing: border-box;
+      font-family:sans-serif;
+      font-size: 26px;
+      color: white;
+      outline: none;
+      
+      transition: .5s;
+  }
+  
+
+  .box img{
+    position: absolute;
+    top: 12%;
+    right: 11px;
+height: 70%;
+width: 70%;
+  }
+
+  .box:hover img{
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .box:hover input{
+      width: 280px;
+      background:transparent;
+      border-radius: 20px;
+  }
+
+.boxhidden{
+  margin-top: 0%;
+  margin-left: 0%;
+}
+#product {
+  border: 2px solid #eaeaea; /* Light border */
+  background-color: #ffffff; /* White background color */
+  padding: 20px;
+  margin: 20px; /* Set equal margin on all sides */
+  display: inline-block;
+  width: 350px; /* Set width for better responsiveness */
+  vertical-align: top; /* Align the tops of the divs */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#product h2 {
+  margin-top: 0;
+  margin-bottom: 10px; /* Add margin below heading */
+  font-size: 20px; /* Larger font size for heading */
+  color: #333333; /* Darker text color */
+}
+
+#product p {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Medium font size for description */
+  color: #666666; /* Lighter text color */
+}
+
+#product a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+  display: block; /* Display as block to prevent overflow */
+  overflow: hidden; /* Hide overflowing content */
+  white-space: nowrap; /* Prevent wrapping */
+  text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+}
+
+#product a:hover {
+  color: #04172b; /* Darker link color on hover */
+}
